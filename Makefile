@@ -32,8 +32,8 @@ webapp/.npminstall:
 	touch $@
 
 vendor: server/glide.lock
-	cd server && go get github.com/Masterminds/glide
-	cd server && $(shell go env GOPATH)/bin/glide install
+	#cd server && go get github.com/Masterminds/glide
+	#cd server && $(shell go env GOPATH)/bin/glide install
 
 dist: webapp/.npminstall vendor plugin.json
 	@echo Building plugin
